@@ -44,17 +44,17 @@ a {
 .page::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: calc(50vw - 15px);
-  height: 428px;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  width: calc(50vw - 0.9375rem);
+  height: 26.75rem;
   background: var(--blue-100);
-  border-bottom-left-radius: 62px;
+  border-bottom-left-radius: 3.875rem;
   z-index: -1;
 }
 
 .container {
-  width: min(1110px, 100% - 64px);
+  width: min(69.375rem, 100% - 4rem);
   margin-inline: auto;
 }
 
@@ -62,7 +62,7 @@ a {
 
 .site-header {
   position: relative;
-  padding-top: 64px;
+  padding-block-start: 4rem;
 }
 
 .header-inner {
@@ -72,14 +72,14 @@ a {
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .site-nav ul {
   display: flex;
   align-items: center;
-  gap: 42px;
+  gap: 2.625rem;
   list-style: none;
 }
 
@@ -87,7 +87,7 @@ a {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.9375rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   color: var(--blue-950);
 }
@@ -102,8 +102,8 @@ a {
 }
 
 .site-nav .dot {
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
   border-radius: 50%;
   background: var(--gray-400);
   opacity: 0.5;
@@ -124,85 +124,84 @@ a {
 
 .illustration {
   position: absolute;
-  top: 211px;
-  left: calc(50% + 27px);
+  inset-block-start: 13.1875rem;
+  inset-inline-start: calc(50% + 1.6875rem);
 }
 
 .illustration img {
-  width: 960px;
-  height: 464px;
+  width: 60rem;
+  height: 29rem;
 }
 
 /* Hero */
 
 .hero {
-  padding-top: 162px;
+  padding-block-start: 10.125rem;
 }
 
 .eyebrow {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .tag {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.9375rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   color: var(--white);
   background: var(--blue-950);
-  padding: 3px 10px 4px;
-  border-radius: 12px;
+  padding: 0.1875rem 0.625rem 0.25rem;
+  border-radius: 0.75rem;
 }
 
 .tracking {
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: 0.9375rem;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
   text-transform: uppercase;
   color: var(--gray-400);
 }
 
 .hero h1 {
-  margin-top: 18px;
+  margin-block-start: 1.125rem;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 4rem;
   line-height: 1;
   text-transform: uppercase;
   color: var(--blue-950);
-  max-width: 520px;
+  max-width: 32.5rem;
 }
 
 .lead {
-  margin-top: 29px;
-  max-width: 290px;
+  margin-block-start: 1.8125rem;
+  max-width: 18.125rem;
   line-height: 1.5;
 }
 
 .cta {
-  margin-top: 64px;
+  margin-block-start: 4rem;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 1.5625rem;
 }
 
 .button {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.9375rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   color: var(--white);
   background: var(--red-400);
-  min-width: 184px;
+  min-width: 11.5rem;
   text-align: center;
-  padding: 14px 0 15px;
-  border-radius: 6px;
-  transition: opacity 0.25s ease;
+  padding: 0.875rem 0 0.9375rem;
+  border-radius: 0.375rem;
 }
 
 .button:hover,
@@ -214,8 +213,8 @@ a {
 
 .attribution {
   position: absolute;
-  left: 50%;
-  bottom: 12px;
+  inset-inline-start: 50%;
+  inset-block-end: 0.75rem;
   transform: translateX(-50%);
   width: max-content;
   font-size: 0.6875rem;
@@ -225,7 +224,7 @@ a {
 
 .attribution a {
   color: var(--blue-950);
-  transition: color 0.25s ease;
+  text-decoration: underline;
 }
 
 .attribution a:hover,
@@ -235,19 +234,19 @@ a {
 
 /* Mobile */
 
-@media (max-width: 767px) {
+@media (max-width: 47.9375em) {
   .page::before {
     width: 50vw;
-    height: 425px;
+    height: 26.5625rem;
   }
 
   .site-header {
-    padding-top: 38px;
+    padding-block-start: 2.375rem;
   }
 
   .logo img {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .site-nav {
@@ -256,20 +255,19 @@ a {
 
   .menu-toggle {
     display: flex;
-    width: 24px;
+    width: 1.5rem;
     justify-content: center;
   }
 
   .mobile-menu {
     display: block;
     position: absolute;
-    top: 97px;
-    left: 32px;
-    right: 32px;
+    inset-block-start: 6.0625rem;
+    inset-inline: 2rem;
     background: var(--white);
-    border-radius: 4px;
-    box-shadow: 0 20px 40px hsla(230, 29%, 20%, 0.25);
-    padding: 27px 24px 24px;
+    border-radius: 0.25rem;
+    box-shadow: 0 1.25rem 2.5rem hsla(230, 29%, 20%, 0.25);
+    padding: 1.6875rem 1.5rem 1.5rem;
     text-align: center;
     z-index: 10;
   }
@@ -281,14 +279,14 @@ a {
   .mobile-menu ul {
     list-style: none;
     display: grid;
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   .mobile-menu a {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.125rem;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.075rem;
     text-transform: uppercase;
     color: var(--blue-950);
   }
@@ -298,59 +296,60 @@ a {
   }
 
   .mobile-menu .divider {
-    height: 1px;
+    height: 0.0625rem;
     background: hsla(231, 7%, 65%, 0.4);
   }
 
   .illustration {
     position: static;
-    margin-top: 59px;
-    margin-left: 9px;
+    margin-block-start: 3.6875rem;
+    margin-inline-start: 0.5625rem;
   }
 
   .illustration img {
-    width: 504px;
+    width: 31.5rem;
     height: auto;
   }
 
   .hero {
-    padding-top: 87px;
+    padding-block-start: 5.4375rem;
   }
 
   .hero h1 {
-    margin-top: 16px;
+    margin-block-start: 1rem;
     font-size: 2.5rem;
   }
 
   .lead {
-    margin-top: 15px;
+    margin-block-start: 0.9375rem;
   }
 
   .cta {
-    margin-top: 26px;
-    gap: 20px;
+    margin-block-start: 1.625rem;
+    gap: 1.25rem;
   }
 
   .button {
     font-size: 0.875rem;
-    min-width: 152px;
-    padding: 11px 0 12px;
+    min-width: 9.5rem;
+    padding: 0.6875rem 0 0.75rem;
   }
 
   .cta .tracking {
     font-size: 0.875rem;
-    letter-spacing: 2.5px;
+    letter-spacing: 0.15625rem;
     white-space: nowrap;
   }
 }
 
-/* Motion preferences */
+/* Motion preferences: opt into transitions only when motion is welcome */
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+@media (prefers-reduced-motion: no-preference) {
+  .button {
+    transition: opacity 0.25s ease;
+  }
+
+  .attribution a {
+    transition: color 0.25s ease;
   }
 }
