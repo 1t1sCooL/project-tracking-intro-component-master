@@ -20,7 +20,7 @@
 
 body {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--gray-600);
   background: var(--white);
 }
@@ -86,7 +86,7 @@ a {
 .site-nav a {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--blue-950);
@@ -148,7 +148,7 @@ a {
 .tag {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--white);
@@ -160,7 +160,7 @@ a {
 .tracking {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.9375rem;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--gray-400);
@@ -170,7 +170,7 @@ a {
   margin-top: 18px;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 1;
   text-transform: uppercase;
   color: var(--blue-950);
@@ -193,7 +193,7 @@ a {
 .button {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--white);
@@ -218,7 +218,7 @@ a {
   bottom: 12px;
   transform: translateX(-50%);
   width: max-content;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1;
   color: var(--gray-400);
 }
@@ -287,7 +287,7 @@ a {
   .mobile-menu a {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     color: var(--blue-950);
@@ -319,7 +319,7 @@ a {
 
   .hero h1 {
     margin-top: 16px;
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .lead {
@@ -332,14 +332,25 @@ a {
   }
 
   .button {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-width: 152px;
     padding: 11px 0 12px;
   }
 
   .cta .tracking {
-    font-size: 14px;
+    font-size: 0.875rem;
     letter-spacing: 2.5px;
     white-space: nowrap;
+  }
+}
+
+/* Motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
