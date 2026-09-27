@@ -11,6 +11,8 @@ This is a solution to the [Project tracking intro component challenge on Fronten
 - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
 - [Development](#development)
 - [Author](#author)
 
@@ -54,6 +56,19 @@ Users should be able to:
 - The starter HTML says "to see a **live** preview" but both design JPGs render "TO SEE A PREVIEW" — pixel-perfect means following the design, not the copy deck.
 - The hamburger (24×16) and close (20×20) icons have different widths; without a fixed-width flex wrapper on the toggle button the close icon drifts 2px right of where the design centers it.
 - The CTA row's letter-spaced caption is 15px/5px tracking on desktop but 14px/2.5px on mobile — scaling only the font-size leaves it ~20px too wide and it wraps.
+
+### Continued development
+
+- Trap focus inside the open mobile menu and return it to the toggle on close — Escape/outside-click closing is already in, a full focus trap is the next accessibility step.
+- Wire the "Schedule a demo" CTA to a real form with validation instead of a placeholder link.
+- Try container queries instead of the viewport media query so the component adapts when embedded in a narrower layout.
+
+### Useful resources
+
+- [google-webfonts-helper](https://gwfh.mranftl.com/fonts) — self-hosted woff2 subsets of Barlow / Barlow Condensed without manual subsetting.
+- [Vite: Env Variables in HTML](https://vite.dev/guide/env-and-mode.html#html-constant-replacement) — the `%BASE_URL%` replacement that keeps font preload URLs and `@font-face` sources identical on any base path.
+- [MDN: prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) — respecting the user's motion preference for the hover transitions.
+- [Preact hooks](https://preactjs.com/guide/v10/hooks/) — `useState`/`useEffect`/`useRef` used for the mobile menu state and its document-level listeners.
 
 ## Development
 
