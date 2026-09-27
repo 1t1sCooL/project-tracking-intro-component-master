@@ -1,0 +1,15 @@
+node_modules
+dist
+.git
+.gitignore
+.vercel
+design
+kubernetes
+Jenkinsfile
+README.md
+README-template.md
+style-guide.md
+preview.jpg
+screenshot-desktop.png
+screenshot-mobile.png
+*.log

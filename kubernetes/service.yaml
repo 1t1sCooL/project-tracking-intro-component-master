@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-tracking-intro-component-master
+  namespace: default
+spec:
+  selector:
+    app: project-tracking-intro-component-master-app
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

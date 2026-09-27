@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-tracking-intro-component-master-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project-tracking-intro-component-master-app
+  template:
+    metadata:
+      labels:
+        app: project-tracking-intro-component-master-app
+    spec:
+      containers:
+        - name: project-tracking-intro-component-master-app
+          image: project-tracking-intro-component-master-app:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: NODE_ENV
+              value: "production"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /ProjectTracking/
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
